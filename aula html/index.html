@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jornada pawdaw</title>
+</head>
+
+<body>
+
+    <section>
+        <input id="input-search" type="number" placeholder="entre">
+        <input id="input-search-1" type="number" placeholder="e">
+        <h1 class="result"></h1>
+        <button onclick="genereteNumber()" class="search" type="submit">pesquisar</button>
+    </section>
+
+    <main>
+        <h1 id="textJS">Jornada JS</h1>
+        <p class="paragraph-js">este e o começo com java script</p>
+        <p class="paragraph-js">este e o avanço em codigos</p>
+        <a name="links" href="#">link teste</a>
+        <button class="saibaMais">clique</button>
+    </main>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            color: #fff;
+            background-color: rgb(0, 0, 255);
+            border-radius: 40px;
+            padding: 10px 15px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        section {
+            width: 100vw;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+
+        main {
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: black;
+        }
+
+        .result {
+            position: absolute;
+            top: 125px;
+
+        }
+
+        .paragraph {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</body>
+<script src="/aula1/script.js"></script>
+
+</html>
