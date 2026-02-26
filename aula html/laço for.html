@@ -26,7 +26,7 @@
 
     function buscar() {
         for (let i = 0; i < contacts.length; i++) {
-            if (input.value === contacts[i]) {
+            if (input.value.toLowerCase() === contacts[i].toLowerCase()) {
                 paragraph.innerHTML = `você achou a: ${contacts[i]}`
 
                 break
