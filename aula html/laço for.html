@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio for</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Digite aqui">
+    <p></p>
+    <button onclick="buscar()">buscar</button>
+</body>
+<script>
+
+    let paragraph = document.querySelector('p');
+    let input = document.querySelector('input');
+
+    const contacts = [
+        'Adia nega',
+        'Edilena',
+        'Tia Edna',
+        'Gorroda'
+    ];
+
+    function buscar() {
+        for (let i = 0; i < contacts.length; i++) {
+            if (input.value === contacts[i]) {
+                paragraph.innerHTML = `você achou a: ${contacts[i]}`
+
+                break
+            } else {
+                paragraph.innerHTML = 'tente outro:'
+            }
+        }
+    };
+
+</script>
+
+</html>
