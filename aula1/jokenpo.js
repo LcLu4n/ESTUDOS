@@ -3,21 +3,34 @@ const advert = document.querySelector('.adversario')
 //forma mais simplificada!!
 const botoes = document.querySelectorAll("button");
 
+let humanScoreValue = 0
+let robotScoreValue = 0
+
 botoes.forEach(function (botao, index) {
     botao.addEventListener("click", function () {
         //alert("Você clicou no botão " + (index + 1));
+        let robot = Math.floor(Math.random() * botoes.length)
 
-        if (index === 0) {
-            alert(index)
+        if (index === robot) {
 
-        } else if (index === 1) {
-            alert(index)
+            humanScoreValue = Math.max(0, humanScoreValue - 1);
+            robotScoreValue = Math.max(0, robotScoreValue - 1);
 
-        } else if (index === 2) {
-            alert(index)
-            
+            humanScore.innerHTML = humanScoreValue;
+            advert.innerHTML = robotScoreValue;
+
+
+        } else if ((index === 0 && robot === 2) ||
+            (index === 1 && robot === 0) ||
+            (index === 2 && robot === 1)) {
+            humanScoreValue++;
+            humanScore.innerHTML = humanScoreValue;
+
+        } else {
+            robotScoreValue++;
+            advert.innerHTML = robotScoreValue;
+
         }
-
 
     });
 });
